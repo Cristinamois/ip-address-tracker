@@ -1,0 +1,149 @@
+
+
+/* @font-face {
+    font-family: ;
+    src: url();
+} */
+
+body {
+    /* background-color: white; */
+    margin: 0;
+    padding: 0;
+    /* width: 100%; */
+}
+
+.containerTop
+{
+    position: relative;
+    height: 300px;
+    background-image: url('./images/pattern-bg-desktop.png'); 
+    background-size: cover;
+    background-position: center; 
+    color: white;
+    text-align: center; 
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+}
+
+#header-content {
+    position: absolute;
+    top: 30%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    z-index: 1;
+    font-family: sans-serif;
+}
+
+
+#map-container {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 100px); /* Hauteur de la fenêtre moins la hauteur du div précédent */
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.middlebox {
+    border: 1px;
+    padding: 10px;
+    background-color: white;
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+
+    top: 160px;
+
+    position: relative;
+    /* width: 300px; Hauteur de votre en-tête */
+   
+    background-size: cover; /* Ajuste la taille de l'image pour couvrir l'en-tête */
+    background-position: bottom; /* Centre l'image dans l'en-tête */
+    color: white; 
+    text-align: center; /* Centre le texte horizontalement */
+    display: flex; /* Permet l'alignement vertical du contenu */
+    justify-content: center; 
+    align-items: center;
+}
+
+.topbox {
+    border: 1px;
+    background-color: white;
+    width: 700px;
+    height: 65px;
+    margin: 0 auto;
+    border-radius: 15px;
+    position: relative;
+    background-size: cover; 
+    background-position: bottom; 
+    color: white; 
+    /* text-align: center;  */
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+/* .topbox:before, */
+.topbox:after {
+    content: ''; /* Obligatoire pour que les pseudo-éléments soient affichés */
+    position: absolute; /* Position absolue par rapport à #rectangle */
+    background-color: black; /* Couleur des bandes noires */
+    width: 70px; /* Largeur des bandes noires */
+    height: 100%; /* Hauteur des bandes noires (même que le rectangle) */
+    border-radius: 0 15px 15px 0;
+}
+
+.topbox:after {
+    right: 0; /* Positionne la bande noire à droite */
+}
+
+/* .topbox p {
+    color: grey;
+    font-family: sans-serif;
+    font-size: 20px;
+    padding-right: 100px;
+} */
+
+.topbox img {
+    position: absolute; /* Position absolue par rapport à #rectangle */
+    top: 18px;
+    right: 25px;
+    /* background-color: red; */
+    width: 20px;
+    height: auto;
+    z-index: 1;
+    /* width: 100%; */
+    /* height: 100%; */
+}
+
+#editableDiv {
+    width: 600px;
+    height: 60px;
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    cursor: text; /* Curseur de texte */
+    /* color: black; */
+    outline: none;
+    overflow-y: auto;
+    font-size: 24px;
+    color: black;
+    text-align: left;
+    margin-top: 30px;
+}
+
+#editableDiv.placeholder {
+    color: gray; /* Couleur du texte placeholder */
+    /* font-style: italic; Style du texte placeholder */
+}
+
+#editableDiv:not(.placeholder) {
+    color: black; /* Couleur du texte lorsque ce n'est pas un placeholder */
+}
